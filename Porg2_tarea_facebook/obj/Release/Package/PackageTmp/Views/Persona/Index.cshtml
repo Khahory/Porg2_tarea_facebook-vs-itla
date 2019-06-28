@@ -1,0 +1,29 @@
+﻿@model Porg2_tarea_facebook.Models.PersonaModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    @using (Html.BeginForm("Import", "Persona", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <!--//colocar un input para el excel-->
+        @Html.Raw(ViewBag.Error)
+        <h3>
+            <label class="form-group">Archivo Excel</label>
+        </h3>
+        <br />
+        <input type="file" name="excelFile" class="form-control" />
+        <br />
+        <input type="submit" value="Import" class="btn btn-group-lg" />
+    }
+
+        <form action="/Persona/CapturarMateriaTarea" method="post">
+            <br />
+            <br />
+            <label>Ventana para llenar el formulario</label>
+            <br />
+            <input type="submit" value="Formulario de materias" class="btn btn-group-lg"/>
+        </form>
+</div>

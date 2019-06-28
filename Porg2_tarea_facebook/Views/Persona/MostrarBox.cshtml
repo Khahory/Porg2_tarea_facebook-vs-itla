@@ -1,0 +1,32 @@
+﻿@model Porg2_tarea_facebook.Models.MateriaModel
+
+@{
+    ViewBag.Title = "MostrarBox";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Escribe las materias y tareas</h2>
+<!--Para mostrar los box de forma correcta-->
+<!--Ejecutara la accion Capturar-->
+<form action="Capturar" method="post">
+    @for (int i = 0; i < Model.candidadesMateriaArray.Count; i++)
+    {
+        Model.CantidadMateria = i;
+    <label>Materia: @i</label>
+        <input class="form-control" type="text" name="nombre" value="" />
+        <br />
+        <br />
+        <!--Dentro del for hay una division porque Model.candidadesTareasArray.Count se multiplicaba con Model.candidadesMateriaArray.Count -->
+        for (int j = 0; j < Model.candidadesTareasArray.Count / Model.candidadesMateriaArray.Count; j++)
+        {
+            Model.CantidadTarea = j;
+            <label>Tarea: @j</label>
+            <!--Mostrar el valor dentro del box-->
+            <input class="form-control" type="text" name="tareas" value="" />
+        }
+        <br />
+        <br />
+        <br />
+    }
+    <input type="submit" name="name" value="Boton" class="btn btn-group"/>
+</form>

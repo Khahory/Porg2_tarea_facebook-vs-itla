@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Success";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h3>Lista de Personas</h3>
+    <table cellpadding="2" cellspacing="2" class="table">
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Carrera</th>
+        </tr>
+        @foreach (var listPersona in ViewBag.ListPersona)
+        {
+            <tr>
+                <td>@listPersona.Nombre</td>
+                <td>@listPersona.Edad</td>
+                <td>@listPersona.Carrera</td>
+            </tr>
+
+        }
+    </table>
+</div>

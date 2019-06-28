@@ -1,0 +1,31 @@
+﻿@model Porg2_tarea_facebook.Models.GradosToFahren
+
+
+@{
+    ViewBag.Title = "CalculadoraFahren_To_Grados";
+}
+
+<h2>Convertidor de grado y fahrenheit</h2>
+
+<form action="TotalDos" method="post">
+    <div class="row">
+        <div class="col-xs-6">
+            
+            <label>Introduzca el numero a convertir</label>
+            <input class="form-control" type="number" name="valor" required />
+            <br />
+        </div>
+            <div class="col-xs-6">
+                <label>Convertir de...</label>
+                <div class="btn-group-lg btn form-group" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="Seleccion" id="op1" value="1" autocomplete="off" checked> Fahrenheit a Grados
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="Seleccion" id="op2" value="2" autocomplete="off"> Grados a Fahrenheit
+                    </label>
+                </div> 
+            </div>
+        </div>
+    <input type="submit" class="btn btn-default" value="Calcular" formtarget="_blank" />
+</form>

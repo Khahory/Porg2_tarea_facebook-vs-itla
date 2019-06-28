@@ -1,0 +1,22 @@
+﻿@model Porg2_tarea_facebook.Models.MateriaModel
+
+@{
+    ViewBag.Title = "CapturarMateriaTarea";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h2>CapturarMateriaTarea</h2>
+    <form action="EnviarDatos" method="post">
+        <br />
+        <label>Cantidad de materias que registrara (Total)</label>
+        <br />
+        <input type="text" value="" name="MateriaTotalInt" class="form-control" />
+        <br />
+        <label>Cantidad de tareas que registrara (Total)</label>
+        <br />
+        <input type="text" value="" name="TareaTotalInt" class="form-control" />
+        <br />
+        <input type="submit" value="Enviar" class="btn btn-group" />
+    </form>
+</div>
